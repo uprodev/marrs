@@ -497,9 +497,123 @@ $(".hover-block-popup").on('click', function (e){
   });
 
 
+  /*guiz2*/
+
+  $(document).on('click', '.quiz-2 .next-step-1', function (e){
+    e.preventDefault();
+    let item = $(this).closest('.item').find('input:checked').closest('.input-wrap').index();
+
+    if(item === 1){
+      $('.quiz-2 .item').removeClass('item-active');
+      $('.quiz-2 .item-2-1').addClass('item-active item-0');
+    }else if(item === 2){
+      $('.quiz-2 .item').removeClass('item-active');
+      $('.quiz-2 .item-2-2').addClass('item-active item-0');
+    }
+  });
+
+  $(document).on('click', '.quiz-2 .next-step-2', function (e){
+    e.preventDefault();
+    let item = $(this).closest('.item').find('input:checked').closest('.input-wrap').index();
+
+    if(item === 1){
+      $('.quiz-2 .item').removeClass('item-active');
+      $('.quiz-2 .item-3-1').addClass('item-active item-0');
+    }else if(item === 2){
+      $('.quiz-2 .item').removeClass('item-active');
+      $('.quiz-2 .item-3-2').addClass('item-active item-0');
+    }
+  });
+
+  $(document).on('click', '.quiz-2 .next-step-default', function (e){
+    e.preventDefault();
+    let item = $(this).closest('.item').find('input:checked').index(),
+      index = $(this).closest('.item').index() + 2;
+    if(item > -1){
+      $('.quiz-2 .item').removeClass('item-active');
+      $(".quiz-2 .item:nth-child("+ index +")").addClass('item-active item-0');
+    }
+  });
+
+  $(document).on('click', '.quiz-2 .next-step-file', function (e){
+    e.preventDefault();
+    let index = $(this).closest('.item').index() + 2;
+    $('.quiz-2 .item').removeClass('item-active');
+    $(".quiz-2 .item:nth-child("+ index +")").addClass('item-active item-0');
+  });
 
 
+  /*guiz3*/
+  $(document).on('click', '.quiz-3 .next-step-default', function (e){
+    e.preventDefault();
+    let item = $(this).closest('.item').find('input:checked').index(),
+      index = $(this).closest('.item').index() + 1,
+      h = window.innerHeight,
+      scrollTop = -h * index,
+      scrollTopH2 = h * index/2,
+      scrollTopH2Mob = h * index/3,
+      translate = 'translate3d(' +0+ ', ' + scrollTop + 'px, ' + 0 + ')',
+      translateH2 = 'translate3d('+ scrollTopH2 + 'px, ' +0+ ', '  + 0 + ')',
+      translateH2Mob = 'translate3d('+ scrollTopH2Mob + 'px, ' +0+ ', '  + 0 + ')';
 
+    if(item > -1){
+      $('.quiz-3 .item').css({
+        '-webkit-transform': translate,
+        '-moz-transform': translate,
+        'transform': translate
+      });
+      if(window.innerWidth > 991){
+        $('.form-section-quiz-3 .line-mars .wrap').css({
+          '-webkit-transform': translateH2,
+          '-moz-transform': translateH2,
+          'transform': translateH2
+        });
+      }else{
+        $('.form-section-quiz-3 .line-mars .wrap').css({
+          '-webkit-transform': translateH2Mob,
+          '-moz-transform': translateH2Mob,
+          'transform': translateH2Mob
+        });
+      }
+
+
+    }
+  });
+
+  $(document).on('click', '.quiz-3 .next-step-text', function (e){
+    e.preventDefault();
+    let item = $(this).closest('.item').find('input').val(),
+      index = $(this).closest('.item').index() + 1,
+      h = window.innerHeight,
+      scrollTop = -h * index,
+      scrollTopH2 = h * index/2,
+      scrollTopH2Mob = h * index/3,
+      translate = 'translate3d(' +0+ ', ' + scrollTop + 'px, ' + 0 + ')',
+      translateH2 = 'translate3d('+ scrollTopH2 + 'px, ' +0+ ', '  + 0 + ')',
+      translateH2Mob = 'translate3d('+ scrollTopH2Mob + 'px, ' +0+ ', '  + 0 + ')';
+    console.log(item)
+    if(item.length>5){
+      $('.quiz-3 .item').css({
+        '-webkit-transform': translate,
+        '-moz-transform': translate,
+        'transform': translate
+      });
+      if(window.innerWidth > 991){
+        $('.form-section-quiz-3 .line-mars .wrap').css({
+          '-webkit-transform': translateH2,
+          '-moz-transform': translateH2,
+          'transform': translateH2
+        });
+      }else{
+        $('.form-section-quiz-3 .line-mars .wrap').css({
+          '-webkit-transform': translateH2Mob,
+          '-moz-transform': translateH2Mob,
+          'transform': translateH2Mob
+        });
+      }
+
+    }
+  });
 
   /*input file*/
   $('input:file').change(function(){

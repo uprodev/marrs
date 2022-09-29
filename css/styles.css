@@ -2240,6 +2240,17 @@ body .pagination-navigation {
     margin-bottom: 60px;
     max-width: 585px; }
 
+.form-section-black .form-step .item {
+  background: #0A0A0A; }
+.form-section-black .form-step #file-info {
+  color: #fff; }
+.form-section-black .form-step .wrap-file .file label span {
+  color: #fff; }
+.form-section-black .form-step .wrap-file .example a {
+  color: rgba(255, 255, 255, 0.5); }
+  .form-section-black .form-step .wrap-file .example a:hover {
+    color: #fff; }
+
 .form-step {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2249,6 +2260,8 @@ body .pagination-navigation {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow: hidden; }
+  .form-step #file-info {
+    color: #444; }
   .form-step .item {
     width: 100%;
     height: 100vh;
@@ -2269,7 +2282,7 @@ body .pagination-navigation {
     -webkit-transition: all .6s ease;
     transition: all .6s ease;
     z-index: 2;
-    background: #0A0A0A; }
+    background: #F9F0EB; }
   .form-step .item-1 {
     position: relative;
     top: 0 !important;
@@ -2298,7 +2311,7 @@ body .pagination-navigation {
           font-weight: 500;
           font-size: 15px;
           line-height: 18px;
-          color: #FFFFFF; }
+          color: #444444; }
           .form-step .wrap-file .file label span i {
             margin-right: 10px; }
         .form-step .wrap-file .file label:hover {
@@ -2316,9 +2329,9 @@ body .pagination-navigation {
         line-height: 18px;
         -webkit-text-decoration-line: underline;
                 text-decoration-line: underline;
-        color: rgba(255, 255, 255, 0.5); }
+        color: rgba(68, 68, 68, 0.5); }
         .form-step .wrap-file .example a:hover {
-          color: #fff; }
+          color: #444; }
   .form-step .item-active {
     top: 0; }
   .form-step .input-wrap-text {
@@ -2342,6 +2355,17 @@ body .pagination-navigation {
       font-size: 15px; }
   .form-step .input-wrap-text + .btn-wrap {
     margin-top: 40px; }
+  .form-step .item-2-2.pre-footer {
+    background: #0A0A0A; }
+    .form-step .item-2-2.pre-footer h4 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 60px;
+      text-align: center;
+      color: #FFFFFF;
+      margin: 0 auto 150px;
+      max-width: 790px; }
 
 .form-step .input-wrap label {
   min-width: 230px; }
@@ -2541,7 +2565,7 @@ header .logo-wrap {
   .form-step .input-wrap input:checked + label .border {
     border: 1px solid white; }
 .form-step .btn-wrap {
-  margin-top: 20px; }
+  margin-top: 40px; }
   .form-step .btn-wrap a {
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -4946,6 +4970,88 @@ main, #fullpage {
 #file-info {
   margin-top: 10px; }
 
+.menu-responsive .menu-wrap .item {
+  border: none;
+  position: relative; }
+  .menu-responsive .menu-wrap .item:after {
+    position: absolute;
+    top: -200px;
+    bottom: -200px;
+    right: 0;
+    content: '';
+    width: 1px;
+    background: rgba(255, 255, 255, 0.4); }
+
+.menu-responsive .menu-wrap .item:nth-child(3):after {
+  display: none; }
+
+.is-menu header .logo-wrap img {
+  -webkit-filter: invert(0) !important;
+          filter: invert(0) !important; }
+
+.menu-responsive .menu-wrap .item-2 .top-menu ul li a {
+  font-family: 'Platform', sans-serif; }
+
 /*-------------------END-PAGE-CASE------------------*/
+/*--------------------PAGE-QUIZ------------------*/
+.form-section-quiz-3 {
+  position: relative;
+  background: #0A0A0A; }
+  .form-section-quiz-3 .line-mars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    z-index: 10; }
+    .form-section-quiz-3 .line-mars .rotate {
+      -webkit-transform: rotate(-90deg);
+              transform: rotate(-90deg);
+      -webkit-transform-origin: top left;
+              transform-origin: top left;
+      position: relative;
+      left: -5px;
+      z-index: 10;
+      top: 7135px; }
+    .form-section-quiz-3 .line-mars .wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-transform-origin: center;
+              transform-origin: center;
+      position: relative;
+      left: 0; }
+      .form-section-quiz-3 .line-mars .wrap h2 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 328px;
+        line-height: 1;
+        text-transform: uppercase;
+        color: #FDBFCA; }
+      .form-section-quiz-3 .line-mars .wrap h2:nth-child(2n + 1) {
+        color: #0A0A0A;
+        text-shadow: -2px 0 #FDBFCA, 0 2px #FDBFCA, 2px 0 #FDBFCA, 0 -2px #FDBFCA; }
+      .form-section-quiz-3 .line-mars .wrap h2.mob {
+        display: none; }
+  .form-section-quiz-3 .content {
+    width: 850px;
+    margin: auto;
+    padding: 40px 0 0 55px; }
+  .form-section-quiz-3 h3 {
+    color: #ffffff;
+    max-width: 100% !important; }
+  .form-section-quiz-3 .form-step .input-wrap label > span {
+    padding-right: 20px; }
+  .form-section-quiz-3 h3:last-child {
+    margin-bottom: 0; }
+  .form-section-quiz-3 .form-step .item {
+    position: relative; }
+
+.form-section-quiz-3 .line-mars .wrap {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease; }
+
+/*-------------------END-PAGE-QUIZ------------------*/
 
 /*# sourceMappingURL=styles.css.map */

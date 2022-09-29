@@ -2308,11 +2308,33 @@ body .pagination-navigation {
     max-width: 585px;
   }
 }
+.form-section-black{
+  .form-step{
+    .item{
+      background: #0A0A0A;
+    }
+    #file-info{
+      color: #fff;
+    }
+  }
+  .form-step .wrap-file .file label span{
+    color: #fff;
+  }
+  .form-step .wrap-file .example a {
+    color: rgba(255, 255, 255, 0.5);
+    &:hover{
+      color: #fff;
+    }
+  }
 
+}
 .form-step{
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  #file-info{
+    color: #444;
+  }
   .item{
     width: 100%;
     height: 100vh;
@@ -2325,7 +2347,7 @@ body .pagination-navigation {
     top:100%;
     transition: all .6s ease;
     z-index: 2;
-    background: #0A0A0A;
+    background: #F9F0EB;
   }
   .item-1{
     position: relative;
@@ -2354,7 +2376,7 @@ body .pagination-navigation {
           font-weight: 500;
           font-size: 15px;
           line-height: 18px;
-          color: #FFFFFF;
+          color: #444444;
           i{
             margin-right: 10px;
           }
@@ -2374,9 +2396,9 @@ body .pagination-navigation {
         font-size: 15px;
         line-height: 18px;
         text-decoration-line: underline;
-        color: rgba(255, 255, 255, 0.5);
+        color: rgba(68, 68, 68, 0.5);
         &:hover{
-          color: #fff;
+          color: #444;
         }
       }
     }
@@ -2408,6 +2430,19 @@ body .pagination-navigation {
   }
   .input-wrap-text + .btn-wrap{
     margin-top: 40px;
+  }
+  .item-2-2.pre-footer{
+    background: #0A0A0A;
+    h4{
+      font-style: normal;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 60px;
+      text-align: center;
+      color: #FFFFFF;
+      margin: 0 auto 150px;
+      max-width: 790px;
+    }
   }
 }
 .form-step .input-wrap label{
@@ -2620,7 +2655,7 @@ header .logo-wrap{
     }
   }
   .btn-wrap{
-    margin-top: 20px;
+    margin-top: 40px;
     a{
       width: fit-content;
     }
@@ -5156,4 +5191,97 @@ main, #fullpage{
 #file-info{
   margin-top: 10px;
 }
+
+.menu-responsive .menu-wrap .item{
+  border: none;
+  position: relative;
+  &:after{
+    position: absolute;
+    top: -200px;
+    bottom: -200px;
+    right: 0;
+    content: '';
+    width: 1px;
+    background: rgba(255, 255, 255, 0.4);
+  }
+}
+.menu-responsive .menu-wrap .item:nth-child(3){
+  &:after{
+    display: none;
+  }
+}
+.is-menu{
+  header .logo-wrap img{
+    filter:invert(0)!important;
+  }
+}
+.menu-responsive .menu-wrap .item-2 .top-menu ul li a{
+  font-family: 'Platform', sans-serif;
+}
 /*-------------------END-PAGE-CASE------------------*/
+/*--------------------PAGE-QUIZ------------------*/
+.form-section-quiz-3{
+  position: relative;
+  background: #0A0A0A;
+  .line-mars{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    z-index: 10;
+    .rotate{
+      transform: rotate(-90deg);
+      transform-origin: top left;
+      position: relative;
+      left: -5px;
+      z-index: 10;
+      top: 7135px;
+    }
+    .wrap{
+      display: flex;
+      transform-origin: center;
+      position: relative;
+      left: 0;
+      h2{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 328px;
+        line-height: 1;
+        text-transform: uppercase;
+        color: #FDBFCA;
+      }
+      h2:nth-child(2n + 1){
+        color: #0A0A0A;
+        text-shadow: -2px 0 #FDBFCA, 0 2px #FDBFCA, 2px 0 #FDBFCA, 0 -2px #FDBFCA;
+      }
+      h2.mob{
+        display: none;
+      }
+    }
+  }
+  .content{
+    width: 850px;
+    margin: auto;
+    padding: 40px 0 0 55px;
+  }
+  h3{
+    color: #ffffff;
+    max-width: 100%!important;
+  }
+  .form-step .input-wrap label > span{
+    padding-right: 20px;
+  }
+  h3:last-child{
+    margin-bottom: 0;
+  }
+  .form-step .item{
+    position: relative;
+  }
+}
+
+.form-section-quiz-3 .line-mars .wrap{
+  transition: all 1s ease;
+}
+/*-------------------END-PAGE-QUIZ------------------*/
