@@ -542,6 +542,7 @@ header .open-menu.is-active{
  /* background: #EC99B3;*/
   background: #FDBFCA;
   border-radius: 35px;
+  font-weight: 700;
   height: 50px;
   line-height: 50px;
   color: #fff;
@@ -555,7 +556,9 @@ header .open-menu.is-active{
     color: #000;
   }
 }
-
+.btn-default i:before{
+  content: "\f061";
+}
 .btn-white{
   background: #fff;
   color: #000;
@@ -3288,8 +3291,11 @@ header .logo-wrap{
   }
 }
 .cursor.is-active{
-  opacity: 1;
+  opacity: 1!important;
   visibility: visible;
+}
+.cursor.cursor-drag.is-active{
+  opacity: 0!important;
 }
 .close-team-mob{
   display: none;
@@ -9244,4 +9250,68 @@ body>.sticky-wrapper{
   .btn-default, .btn-default i{
     font-weight: 700;
   }
+}
+
+.form-step .input-wrap-rocket.is-click input + label img {
+  -webkit-filter: invert(75%) sepia(16%) saturate(1398%) hue-rotate(299deg) brightness(100%) contrast(88%);
+  filter: invert(75%) sepia(16%) saturate(1398%) hue-rotate(299deg) brightness(100%) contrast(88%);
+}
+
+.form-section{
+  z-index: 9;
+}
+
+.about .video-wrap video.mob-video{
+  display: none;
+}
+
+.about .content .item figure .text h5, .about .content .item figure .text p{
+  color: #fff;
+}
+
+.objective .item-wrap .left img, .objective .item-wrap .right img{
+  height: auto;
+}
+.solution-makelaars .img-wrap img{
+  height: auto;
+}
+
+.services-template-ux-ui .footer-wrap:before{
+  display: none;
+}
+.services-template-ux-ui .fix{
+  display: none!important;
+}
+
+.solution .img-wrap img, .soc-stories .inst .img-wrap img, .soc-stories .face .img-wrap img{
+  height: auto;
+}
+
+.single-project img{
+  height: auto;
+}
+
+.popup-team .left .text-wrap{
+  margin-top: 30px;
+}
+
+.popup-team .left .text-wrap p{
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: inherit;
+}
+
+.tel-form{
+  position: relative;
+}
+
+.tel-form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+}
+
+.wordpress figure img{
+  height: auto;
 }

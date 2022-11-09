@@ -441,6 +441,12 @@ $(".hover-block-popup").on('click', function (e){
 
 
   /*guiz1*/
+  $(document).on('click', '.input-wrap-rocket', function (e){
+    $('.input-wrap-rocket').removeClass('is-click');
+    $(this).addClass('is-click');
+    $(this).prevAll().addClass('is-click')
+  })
+
 
   $(document).on('click', '.quiz-1 .next-step-1', function (e){
     e.preventDefault();
@@ -779,19 +785,19 @@ $(".hover-block-popup").on('click', function (e){
     $(this).closest('.link-wrap').siblings('p').slideDown()
   });
 
-  /*team popup*/
+  /*team popup*/  /*team popup*/
   $(document).on('click', '.team-fancybox', function (e){
     e.preventDefault();
 
-
-    $.fancybox.open( $('#team'), {
+    let item = $(this).attr('href');
+    $.fancybox.open( $(item), {
       touch:false,
       autoFocus:false,
       animationDuration : 600,
       animationEffect   : 'slide-in-out',
       beforeShow : function(e){
-       $('body').addClass('is-white');
-       $('.cursor').addClass('is-active');
+        $('body').addClass('is-white');
+        $('.cursor').addClass('is-active');
         $('header').addClass('black');
       },
       afterClose: function () {
@@ -905,7 +911,16 @@ $(".hover-block-popup").on('click', function (e){
           $(tabs).find(".tabs-menu").children("li").eq(i).addClass("is-active");
         }
 
-        showPage(0);
+        if($("body").hasClass('single-project')){
+          let index = document.URL.toString().slice(-1);
+          if(index == 0 || index == 1 || index == 2){
+            showPage(index);
+          }else{
+            showPage(0);
+          }
+        }else{
+          showPage(0);
+        }
 
         $(tabs).find(".tabs-menu").children("li").each(function(index, element){
           $(element).attr("data-page", i);
@@ -914,13 +929,7 @@ $(".hover-block-popup").on('click', function (e){
 
         $(tabs).find(".tabs-menu").children("li").click(function(){
           showPage(parseInt($(this).attr("data-page")));
-          if($(window).scrollTop() < 100){
-            $('body,html').animate({scrollTop: 0}, 200);
-          }else if($(window).scrollTop() > 100 && $(window).scrollTop() < 2000){
-            $('body,html').animate({scrollTop: 0}, 1500);
-          }else{
-            $('body,html').animate({scrollTop: 0}, 2500);
-          }
+          $('body,html').animate({scrollTop: 0}, 0);
 
           $(".info-case .wrap").unstick();
 

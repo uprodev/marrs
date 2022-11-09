@@ -89,7 +89,7 @@
     margin-left: 50px; }
 
   .typography-colors .text-img-wrap .item-color-1 .color {
-    width: 300px; }
+    width: 250px; }
 
   .anim-section .inner-wrap .subheader {
     font-size: 16px; }
@@ -1356,7 +1356,8 @@
     margin-bottom: 30px; }
     .reviews .left .img-wrap img {
       width: 100%;
-      vertical-align: top; }
+      vertical-align: top;
+      height: auto; }
 
   .form-section .content .left {
     width: 100%;
@@ -1365,7 +1366,8 @@
   .form-section figure {
     position: relative;
     width: 100%;
-    height: 400px; }
+    height: 400px;
+    display: none; }
 
   .form-section {
     height: -webkit-fit-content;
@@ -1432,10 +1434,21 @@
     margin-top: 20px; }
 
   .popup-team figure {
-    display: none; }
+    width: 100%;
+    height: 50%;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1; }
+
+  .popup-team .popup-main {
+    width: 100%; }
 
   .popup-team .left {
     width: 100%;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    height: 50%;
     left: 0 !important; }
 
   .popup-team .left h6 {
@@ -2015,7 +2028,8 @@
     top: 22px; }
 
   .solution-9-1 .img .item img {
-    height: 350px; }
+    height: 350px;
+    width: auto; }
 
   .img-2n-block-9-2 .item {
     height: 400px; }
@@ -2062,7 +2076,19 @@
     width: 100%; }
 
   .business-card-10-2 .content-bottom {
-    padding: 200px 0 20px 50%; } }
+    padding: 200px 0 20px 50%; }
+
+  .about .video-wrap video {
+    display: none; }
+
+  .about .video-wrap video.mob-video {
+    display: block; }
+
+  .item.item-video .text {
+    display: none; }
+
+  .about .content .item.item-video figure img {
+    display: none; } }
 @media (max-width: 767px) {
   .content-width {
     width: 540px; }
@@ -2771,7 +2797,13 @@
     height: 330px; }
 
   .business-card-10-1 .bg {
-    top: 270px; } }
+    top: 270px; }
+
+  .wordpress figure img {
+    height: auto; }
+
+  .wordpress figure img {
+    height: auto; } }
 @media (max-width: 575px) {
   .content-width {
     width: 100%;
@@ -4793,7 +4825,19 @@
     width: auto; }
 
   .color-block .right .item img {
-    vertical-align: top; } }
+    vertical-align: top; }
+
+  .tabs-menu-blog li {
+    line-height: 22px;
+    height: 24px; }
+
+  .tabs-menu-blog li a {
+    font-size: 15px;
+    line-height: 22px; }
+
+  .business-card-9-1 .img .item img {
+    width: 100%;
+    height: auto; } }
 @media (max-width: 350px) {
   .color-block .right .item:nth-child(4n) {
     margin-right: 0; } }

@@ -107,7 +107,7 @@
     margin-left: 50px;
   }
   .typography-colors .text-img-wrap .item-color-1 .color {
-    width: 300px;
+    width: 250px;
   }
   .anim-section .inner-wrap .subheader {
     font-size: 16px;
@@ -1411,6 +1411,7 @@
     img{
       width: 100%;
       vertical-align: top;
+      height: auto;
     }
   }
   .form-section .content .left{
@@ -1421,6 +1422,7 @@
     position: relative;
     width: 100%;
     height: 400px;
+    display: none;
   }
   .form-section{
     height: fit-content;
@@ -1484,13 +1486,20 @@
       margin-top: 20px;
     }
   }
-  .popup-team figure{
-    display: none;
-  }
-  .popup-team .left{
+  .popup-team figure {
     width: 100%;
-    left: 0!important;
+    height: 50%;
+    -webkit-box-ordinal-group: 2;-ms-flex-order: 1;order: 1;
   }
+  .popup-team .popup-main{
+    width: 100%;
+  }
+
+  .popup-team .left {
+    width: 100%;
+    -webkit-box-ordinal-group: 3;-ms-flex-order: 2;order: 2;
+    height: 50%;
+    left: 0 !important; }
   .popup-team .left h6{
     text-align: center;
   }
@@ -2049,6 +2058,7 @@
   }
   .solution-9-1 .img .item img {
     height: 350px;
+    width: auto;
   }
   .img-2n-block-9-2 .item{
     height: 400px;
@@ -2096,6 +2106,18 @@
   }
   .business-card-10-2 .content-bottom {
     padding: 200px 0 20px 50%;
+  }
+  .about .video-wrap video{
+    display: none;
+  }
+  .about .video-wrap video.mob-video{
+    display: block;
+  }
+  .item.item-video .text {
+    display: none;
+  }
+  .about .content .item.item-video figure img{
+    display: none;
   }
 }
 
@@ -2790,7 +2812,12 @@
   .business-card-10-1 .bg {
     top: 270px;
   }
-  
+  .wordpress figure img{
+    height: auto;
+  }
+  .wordpress figure img{
+    height: auto;
+  }
 }
 
 @media (max-width:575px) {
@@ -4834,6 +4861,18 @@
   }
   .color-block .right .item img{
     vertical-align: top;
+  }
+  .tabs-menu-blog li{
+    line-height: 22px;
+    height: 24px;
+  }
+  .tabs-menu-blog li a{
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .business-card-9-1 .img .item img{
+    width: 100%;
+    height: auto;
   }
 }
 @media (max-width: 350px){
