@@ -138,6 +138,15 @@
 }
 
 @font-face {
+  font-family: 'DM Sans';
+  src: url('../fonts/DMSans-Regular.woff2') format('woff2'),
+  url('../fonts/DMSans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Noto Serif';
   src: url('../fonts/NotoSerif.woff2') format('woff2'),
   url('../fonts/NotoSerif.woff') format('woff');

@@ -403,9 +403,24 @@
 	<script src="js/jquery.sticky.js"></script>
 	<script src="js/aos.js"></script>
 	<script src="js/cuttr.min.js"></script>
+	<script src="js/typeit.min.js"></script>
 	<script src="js/script.js"></script>
 
+<script>
+	jQuery(document).ready(function ($) {
 
+		new TypeIt(".menu-responsive .menu-wrap .item-1 h6", {
+			loop: true,
+			speed: 30,
+			waitUntilVisible: true
+		})
+			.pause(500)
+			.type("уйцу", { delay: 1000 })
+			.delete(200)
+			.go();
+
+	});
+</script>
 <!--	<script type="text/javascript">
 		var myFullpage = new fullpage('#fullpage', {
 			/*scrollOverflow: true,*/

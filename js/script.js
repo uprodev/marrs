@@ -209,6 +209,9 @@ $(".hover-block-popup").on('click', function (e){
       $('.case-nav-active').onePageNav({
         scrollThreshold: 0.01,
       });
+      //new 23-01-24
+      $('.grid').isotope( 'reloadItems' ).isotope();
+
     });
 
 
@@ -281,7 +284,7 @@ $(".hover-block-popup").on('click', function (e){
         $('.form-section').removeClass('is-visible');
       };
 
-      if($('.item-work2').hasClass('current')){
+      if($('.item-work2').hasClass('current') || $('.item-work1').hasClass('current')){
         $('.work-wrap').addClass('is-active');
       }else{
         $('.work-wrap').removeClass('is-active');
@@ -697,7 +700,21 @@ $(".hover-block-popup").on('click', function (e){
   var swiperQuiz = new Swiper(".quiz-slider-3", {
     direction: "vertical",
     allowTouchMove:false,
+    speed: 2000,
   });
+
+  swiperQuiz.on('slideChange', function () {
+    let item = swiperQuiz.activeIndex,
+      scrollTopH2 = item*300
+    translateH2 = 'translate3d('+ scrollTopH2 + 'px, ' +0+ ', '  + 0 + ')',
+
+      $('.form-section-quiz-3 .line-mars .wrap').css({
+        '-webkit-transform': translateH2,
+        '-moz-transform': translateH2,
+        'transform': translateH2
+      });
+
+  })
 
 
   $(document).on('click', '.form-section-quiz-3 .next a', function (e){
@@ -1049,7 +1066,26 @@ $(".hover-block-popup").on('click', function (e){
   }
 
 
+  document.addEventListener( 'wpcf7mailsent', function( event ) {
+    $('.quiz-2 .item').removeClass('item-active');
+    $('.quiz-2 .item-9-1').addClass('item-active');
+    $('.quiz-1 .item').removeClass('item-active');
+    $('.quiz-1 .item-9-1').addClass('item-active');
+  }, false );
 
+
+
+
+
+
+  //new 23.01.24
+  $('.grid').isotope({
+    itemSelector: '.grid-item',
+    percentPosition: true,
+    masonry: {
+      columnWidth: '.grid-sizer'
+    }
+  })
 
 });
 
